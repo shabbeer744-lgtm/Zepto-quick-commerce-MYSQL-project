@@ -1,0 +1,5 @@
+﻿SKU-id,Category,name,product-id,mrp,discountPercent,availableQuantity,discountedSellingPrice,weightInGms,outOfStock,quantity
+997 ,Cooking Essentials,"Maggi Magic Cubes, Vegetarian Masala",273 ,3500 ,2 ,6 ,3400 ,48 ,FALSE,48 
+976 ,Cooking Essentials,"Maggi Magic Cubes, Vegetarian Masala",372 ,3500 ,2 ,1 ,3400 ,40 ,FALSE,40 
+997 ,Munchies,"Maggi Magic Cubes, Vegetarian Masala",787 ,3500 ,2 ,6 ,3400 ,48 ,FALSE,48 
+976 ,Munchies,"Maggi Magic Cubes, Vegetarian Masala",886 ,3500 ,2 ,1 ,3400 ,40 ,FALSE,40 
