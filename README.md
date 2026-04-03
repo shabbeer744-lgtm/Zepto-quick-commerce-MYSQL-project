@@ -59,8 +59,8 @@ If you're not able to use the import feature, write this code instead:
 <img width="794" height="91" alt="image" src="https://github.com/user-attachments/assets/bcf44f9b-300a-443d-a4ca-a32c573a3437" />
 
 challenges while data import:
-Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
-During data exploration, 4 rows were identified as missing due to data formatting issues. These discrepancies were corrected, and the cleaned data was reloaded into the concerned table in MySQL.
+* Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
+* During data exploration, 4 rows were identified as missing due to data formatting issues. These discrepancies were corrected, and the     cleaned data was reloaded into the concerned table in MySQL.
 
 **3. 🔍 Data Exploration**
 
@@ -102,8 +102,8 @@ During data exploration, 4 rows were identified as missing due to data formattin
 
 **🧠 Lessons Learned**
 
-1.Handling Data Type Mismatches during SSMS to MySQL migrations (e.g., converting BOOLEAN strings to BIT types).
-2.Managing Foreign Key Constraints during bulk data truncation and testing cycles.
-3.Optimizing CSV import workflows to handle large datasets without timeout errors.
-4.Identifying and resolving data quality issues such as missing or incorrectly formatted records during data exploration.
+* Handling Data Type Mismatches during SSMS to MySQL migrations (e.g., converting BOOLEAN strings to BIT types).
+* Managing Foreign Key Constraints during bulk data truncation and testing cycles.
+* Optimizing CSV import workflows to handle large datasets without timeout errors.
+* Identifying and resolving data quality issues such as missing or incorrectly formatted records during data exploration.
 
