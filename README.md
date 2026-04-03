@@ -21,9 +21,9 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 🧾 Columns:
 
-sku_id: Unique identifier for each product entry (Synthetic Primary Key)
+-sku_id: Unique identifier for each product entry (Synthetic Primary Key)
 
-name: Product name as it appears on the app
+-name: Product name as it appears on the app
 
 category: Product category like Fruits, Snacks, Beverages, etc.
 
