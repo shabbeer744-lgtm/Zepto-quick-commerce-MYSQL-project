@@ -53,7 +53,7 @@ started by creating a SQL table with appropriate data types:
 <img width="650" height="251" alt="image" src="https://github.com/user-attachments/assets/efa6f99a-d623-4ed1-bf1e-f9f81bcbf43f" />
 
 **2.Data Import**
-Loaded CSV using pgAdmin's import feature.
+Loaded CSV using Table data import wizard feature.
 
 If you're not able to use the import feature, write this code instead:
 <img width="794" height="91" alt="image" src="https://github.com/user-attachments/assets/bcf44f9b-300a-443d-a4ca-a32c573a3437" />
