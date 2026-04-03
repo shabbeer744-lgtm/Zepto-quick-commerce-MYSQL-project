@@ -21,28 +21,89 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 🧾 Columns:
 
-sku_id: Unique identifier for each product entry (Synthetic Primary Key)
+* sku_id: Unique identifier for each product entry (Synthetic Primary Key)
 
--name: Product name as it appears on the app
+* name: Product name as it appears on the app
 
-category: Product category like Fruits, Snacks, Beverages, etc.
+* category: Product category like Fruits, Snacks, Beverages, etc.
 
-mrp: Maximum Retail Price (originally in paise, converted to ₹)
+* mrp: Maximum Retail Price (originally in paise, converted to ₹)
 
-discountPercent: Discount applied on MRP
+d* iscountPercent: Discount applied on MRP
 
-discountedSellingPrice: Final price after discount (also converted to ₹)
+* discountedSellingPrice: Final price after discount (also converted to ₹)
+  
+* availableQuantity: Units available in inventory
 
-* Item 1
-* Item 2
-* Item 3
+* weightInGms: Product weight in grams
 
-availableQuantity: Units available in inventory
+* outOfStock: Boolean flag indicating stock availability
 
-weightInGms: Product weight in grams
-
-outOfStock: Boolean flag indicating stock availability
-
-quantity: Number of units per package (mixed with grams for loose produce)
+* quantity: Number of units per package (mixed with grams for loose produce)
 
 **Rows handled:3732**
+
+**🔧 Project Workflow**
+
+Here’s a step-by-step breakdown of what i have done in this project:
+
+**1. Database & Table Creation**
+   
+started by creating a SQL table with appropriate data types:
+<img width="650" height="251" alt="image" src="https://github.com/user-attachments/assets/efa6f99a-d623-4ed1-bf1e-f9f81bcbf43f" />
+
+**2.Data Import**
+Loaded CSV using pgAdmin's import feature.
+
+If you're not able to use the import feature, write this code instead:
+<img width="794" height="91" alt="image" src="https://github.com/user-attachments/assets/bcf44f9b-300a-443d-a4ca-a32c573a3437" />
+
+challenges while data import:
+Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
+During data exploration, 4 rows were identified as missing due to data formatting issues. These discrepancies were corrected, and the cleaned data was reloaded into the concerned table in MySQL.
+
+**3. 🔍 Data Exploration**
+
+* Counted the total number of records in the dataset
+
+* Viewed a sample of the dataset to understand structure and content
+
+* Checked for null values across all columns
+
+* Identified distinct product categories available in the dataset
+
+* Compared in-stock vs out-of-stock product counts
+
+* Detected products present multiple times, representing different SKUs
+
+**4. 🧹 Data Cleaning**
+
+* Identified and removed rows where MRP or discounted selling price was zero
+
+* Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+
+**5. 📊 Business Insights**
+
+* Found top 10 best-value products based on discount percentage
+
+* Identified high-MRP products that are currently out of stock
+
+* Estimated potential revenue for each product category
+
+* Filtered expensive products (MRP > ₹500) with minimal discount
+
+* Ranked top 5 categories offering highest average discounts
+
+* Calculated price per gram to identify value-for-money products
+
+* Grouped products based on weight into Low, Medium, and Bulk categories
+
+* Measured total inventory weight per product category
+
+**🧠 Lessons Learned**
+
+1.Handling Data Type Mismatches during SSMS to MySQL migrations (e.g., converting BOOLEAN strings to BIT types).
+2.Managing Foreign Key Constraints during bulk data truncation and testing cycles.
+3.Optimizing CSV import workflows to handle large datasets without timeout errors.
+4.Identifying and resolving data quality issues such as missing or incorrectly formatted records during data exploration.
+
