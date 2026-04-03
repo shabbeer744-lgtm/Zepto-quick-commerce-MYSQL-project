@@ -58,7 +58,7 @@ Loaded CSV using pgAdmin's import feature.
 If you're not able to use the import feature, write this code instead:
 <img width="794" height="91" alt="image" src="https://github.com/user-attachments/assets/bcf44f9b-300a-443d-a4ca-a32c573a3437" />
 
-challenges while data import:
+**challenges while data import:**
 * Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 * During data exploration, 4 rows were identified as missing due to data formatting issues. These discrepancies were corrected, and the     cleaned data was reloaded into the concerned table in MySQL.
 
